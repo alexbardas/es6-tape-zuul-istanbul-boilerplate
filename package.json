@@ -1,0 +1,51 @@
+{
+  "name": "es6-tape-zuul-istanbul-boilerplate",
+  "version": "1.0.0",
+  "description": "The ideal stack for writing, running and measuring the coverage of unit tests in node and browsers in 2016.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint 'lib/**/*.js' 'tests/**/*.js'",
+    "pretest": "npm run lint",
+    "test": "babel-tape-runner tests/**/*.js | tap-dot",
+    "test:browser": "zuul -- tests/**/*.js",
+    "test:browser:headless": "zuul --electron -- tests/**/*.js | tap-dot",
+    "test:browser:local": "zuul --local 8081 -- tests/**/*.js",
+    "coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/tape/bin/tape -- tests/**/*.js | tap-dot",
+    "postcoverage": "istanbul report text-summary && istanbul check-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexbardas/es6-tape-zuul-istanbul-boilerplate.git"
+  },
+  "keywords": [
+    "test",
+    "unit",
+    "ci",
+    "tape",
+    "zuul",
+    "coverage",
+    "istanbul",
+    "isparta",
+    "es2015",
+    "es6"
+  ],
+  "author": "Alex Bardas <alex.bardas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexbardas/es6-tape-zuul-istanbul-boilerplate/issues"
+  },
+  "homepage": "https://github.com/alexbardas/es6-tape-zuul-istanbul-boilerplate#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-tape-runner": "^2.0.1",
+    "babelify": "^7.3.0",
+    "eslint": "^2.11.1",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.3",
+    "tap-dot": "^1.0.5",
+    "tape": "^4.5.1",
+    "zuul": "^3.10.1"
+  }
+}

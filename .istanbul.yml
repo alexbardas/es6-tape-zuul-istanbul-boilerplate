@@ -1,0 +1,17 @@
+check:
+  global:
+    statements: 90
+    lines: 90
+    branches: 90
+    functions: 90
+reporting:
+  print: none
+  reports:
+    - html
+    - lcov
+  watermarks:
+    branches: [60, 80]
+    functions: [60, 80]
+    lines: [60, 80]
+    statements: [60, 80]
+verbose: false

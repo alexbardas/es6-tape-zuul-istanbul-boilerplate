@@ -1,0 +1,16 @@
+ui: tape
+browsers:
+  - name: chrome
+    version: -1..latest
+  - name: firefox
+    version: -1..latest
+  - name: internet explorer
+    version: -1..latest
+  - name: iphone
+    version: -1..latest
+  - name: android
+    version: -1..latest
+browserify:
+  - transform:
+      name: babelify
+      presets: es2015
