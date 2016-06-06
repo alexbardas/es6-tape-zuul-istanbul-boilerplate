@@ -1,4 +1,4 @@
-# es6-tape-zuul-istanbul-boilerplate
+# es6-tape-zuul-istanbul-boilerplate [![Build Status](https://secure.travis-ci.org/alexbardas/es6-tape-zuul-istanbul-boilerplate)](http://travis-ci.org/alexbardas/es6-tape-zuul-istanbul-boilerplate)
 
 The ideal stack for writing, running and measuring the coverage of unit tests in node and browsers in 2016.
 
