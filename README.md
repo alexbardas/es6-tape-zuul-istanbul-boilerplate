@@ -2,11 +2,11 @@
 The ideal stack for writing, running and measuring the coverage of unit tests in node and browsers in 2016.
 
 ## Main features:
-- focus on the project you're building, not the testing tools
-- super easy to integrate in any CI environment
-- automatic es2015 support through [babel](https://babeljs.io/)
-- minimal configuration (no complex setup, no extra karma, gulp (grunt) / jasmine (mocha) configuration)
-- completely unopinionated about the build process (can be used with [webpack](https://webpack.github.io), [browserify](http://browserify.org) or any other build tools)
+- [x] focus on the project you're building, not the testing tools
+- [x] super easy to integrate in any CI environment
+- [x] automatic es2015 support through [babel](https://babeljs.io/)
+- [x] minimal configuration (no complex setup, no extra karma, gulp (grunt) / jasmine (mocha) configuration)
+- [x] completely unopinionated about the build process (can be used with [webpack](https://webpack.github.io), [browserify](http://browserify.org) or any other build tools)
 
 ## Used libraries:
 
@@ -24,13 +24,14 @@ This stack can be used with the initial configuration straight away. All configu
 Configured to be used with es2015 by default. Also supports older versions of ecmascript.
 
 ## Usage
+```javascript
+npm test // runs eslint on all files and runs all tests in node.js
+npm run test:browser // uses provided `.zuul{.yml,rc}` configuration to run the tests in remote browsers
+npm run test:browser:local // creates a server for running tests locally in any browser
+npm run coverage // generates a code coverage report and returns an error code if coverage is below the specified threshold (as configured in `.istanbul.yml`)
+```
 
-`npm test` // runs eslint on all files and runs all tests in node.js
-`npm run test:browser` // uses provided `.zuul{.yml,rc}` configuration to run the tests in remote browsers
-`npm run test:browser:local` // creates a server for running tests locally in any browser
-`npm run coverage` // generates a code coverage report and returns an error code if coverage is below the specified threshold (as configured in `.istanbul.yml`)
-
-[Electron-prebuilt](https://github.com/electron-userland/electron-prebuilt) is huge and is not included by default. Type the following commands to install and run headless tests locally:
+[Electron-prebuilt](https://github.com/electron-userland/electron-prebuilt) is too big and is not included by default. Type the following commands to install and run headless tests locally:
 
 ```
 npm install electron-prebuilt
@@ -68,3 +69,4 @@ It's out of the scope of this boilerplate to provide any guidance for e2e testin
 ## License
 
 MIT
+
