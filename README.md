@@ -33,10 +33,10 @@ Configured to be used with es2015 by default. Also supports older versions of ec
 
 [Electron-prebuilt](https://github.com/electron-userland/electron-prebuilt) is huge and is not included by default. Type the following commands to install and run headless tests locally:
 
-``
+```
 npm install electron-prebuilt
 npm run test:browser:headless
-``
+```
 
 ## Why tape?
 
